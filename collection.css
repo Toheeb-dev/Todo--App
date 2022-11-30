@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+#todo1{
+    margin-left: 350px;
+    border-radius: 6px;
+    margin-top: 130px;
+}
+#todo2{
+    border-radius: 6px;
+    margin-bottom: 40px !important;
+}
+#todo3{
+    border-radius: 6px;
+}

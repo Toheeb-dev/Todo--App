@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="todopage2.css">
+</head>
+<body>
+    <div class="app">
+      <h4></h4>
+      <!-- <form action=""> -->
+        <div id="addNewtask"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <span class="container form-control border border-0 w-75 d-block  my-5" id="addnewtask">Add New Task <i class="fa-solid fa-plus float-end fw-bold"></i></span>
+        </div>
+        <div id="addNewtask">
+          <span class="container form-control border border-0 w-75 d-block  my-5  " id="addNewtask2" onclick="select()"> Select New Task</span>
+        </div>
+      
+
+<!-- Modal -->
+<form action="" >
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Task</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="text-danger" id="invalidInputs"></div>
+        <P>Task Title</P>
+          <input class="form-control" type="text" name="" id="textInput">
+          <br>
+          <p>Due Date</p>
+          <input class="form-control" type="date" name="" id="dateInput">
+          <br>
+          <p>Description</p>
+          <textarea class="from-control w-75" name="" id="textarea" cols="30" rows="5"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="close()">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="addTodo()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<!-- Modal -->
+<form action="" >
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit your Task</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="text-danger" id="invalidInputs"></div>
+        <P>Task Title</P>
+          <input class="form-control" type="text" name="" id="editInp">
+          <br>
+          <p>Due Date</p>
+          <input class="form-control" type="date" name="" id="editDate">
+          <br>
+          <p>Description</p>
+          <textarea class="from-control w-75" name="" id="editText" cols="30" rows="5"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="updateMe()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+      <!-- <div id="tasks">
+        <div class="task1">
+          <h3 class="fw-bold">Task 1</h3>
+          <h2 class="small text-secndary" >19/1/2022</h2>
+          <h2>Description what to do</h2>
+          <div id="image">
+            <img src="./edit.png" alt="" id="edit">
+          <img src="./trash.png" alt="" id="delete">
+           </div> -->
+          
+          <!-- </div>
+          <div class="task2">
+          <h3 class="fw-bold">Task 2</h3>
+          <h2 class="small text-secndary">19/1/2022</h2>
+          <h1>Description what to do</h1>
+          <div id="image">
+            <img src="./edit.png" alt="" id="edit">
+          <img src="./trash.png" alt="" id="delete" onclick="deleteTask()">
+          </div>
+        </div>
+      </div> -->
+      <div id="disp"></div>
+
+
+    </div>
+    
+    <script src="todopage3.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#section{
+    background: brown;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+.innerBackground{
+   position: relative;
+   margin: 10% auto 0;
+   width: 50%;
+   height: 650px;
+   background: linear-gradient(0deg , black , rgb(82, 80, 80) );
+   
+}
+ .glow::before , .glow::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg ,  yellow, green, red, orange,aqua, indigo, violet, tomato, blue);
+    z-index: -1;
+    background-size: 400px;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    animation: animate 5s linear infinite ;
+}
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+        
+    }
+    50% {
+        background-position:400px 0 ;
+        
+    }
+    100%{
+        background-position: 0 0;
+        
+    }
+}
+.glow::after{
+    filter: blur(70px);
+    opacity: 40%;
+}

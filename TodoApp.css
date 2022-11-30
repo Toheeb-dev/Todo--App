@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#navbar{
+    background-color: #bf0909;
+}
+
+#todoheader{
+    padding-top: 20px !important;
+    margin-bottom: 40px;
+    white-space: nowrap;
+   
+    
+    
+}
+
+#headerText{
+    line-height: 30px !important;
+   
+}
+#image{
+    margin-top: -40px !important;
+}
+#quote{
+    text-align: left !important;
+    line-height:25px ;
+    justify-content: center;
+}
+#circle{
+    background-color: rgba(199, 29, 29, 0.795);
+    height: 120px;
+    width: 115px;
+    border-radius:80px;
+    margin-left: 60px !important;
+    margin-top: 30px;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 700;
+
+}
+#border{
+margin-left: 160px;
+margin-top: -90px;
+border-left:1px solid rgba(165, 28, 28, 0.795); ;
+}
+#btn{
+    margin-top: 70px;
+    margin-left: 110px;
+    font-size: medium;
+}
+#btn:hover{
+    width: 70px;
+    cursor: pointer;
+    translate: 1s linear;
+}
+
+#quot{
+    white-space: nowrap;
+}
+#imag{
+    background: linear-gradient(36deg,  rgba(231, 84, 16, 0.685), rgba(250, 44, 44, 0.884));
+    height: 120px;
+    padding-top: 70px;
+    margin-top: 30px;
+}
+#create{
+    margin-top: -50px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 23px;
+
+}
+#signup{
+    text-decoration: none;
+}
+#login{
+    text-decoration: none;
+}
+@media screen and (min-width:1000px){
+    #todoheader{
+        margin-bottom: 80px !important;
+        white-space: nowrap;
+        margin-top: 30px !important;    
+    }
+    #btn{
+        margin-top: 70px;
+        margin-left: 350px;
+        font-size: medium;
+        font-size: 20px;
+     }
+    .body{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 5px;
+        margin-left: 100px !important;
+    }
+    #taskcontainer{
+        /* margin-top: 50px; */
+        justify-content: space-around !important;
+        background:  linear-gradient(36deg,  rgba(231, 84, 16, 0.685), rgba(250, 44, 44, 0.884)) ;
+        /* position: relative; */
+
+    }
+    .todo{
+        height: 130px;
+        width: 200px;
+        border-radius: 5px;
+        border:1px solid black ;
+    }
+    
+    #img{
+        width: 60px;
+        height: 60px;
+        margin-top: 15px;
+    }
+    #quot{
+        font-size: 25px;
+        margin-top: 25px !important;
+        padding-bottom: 20px !important;
+    }
+    #image{
+        margin-top: -40px !important;
+
+    }
+    #box{
+        padding-left: 227px;
+        padding-right: 210px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        row-gap: 30px;
+        margin-top: 30px !important;
+        position: absolute;
+        top: 800px;
+        column-gap: 27px;
+
+        
+
+    }
+    #create{
+        margin-top: -30px;
+        font-weight: 700;
+        text-align: center;
+    }
+    #plus{
+        width: 23px;
+        height: 21px;
+        margin-left: 1100px;
+        margin-top: -158px;
+    }
+    #navbar{
+        background-color: #bf0909;
+    }
+    #imag{
+        background: linear-gradient(36deg,  rgba(231, 84, 16, 0.685), rgba(250, 44, 44, 0.884));
+        height: 500px;
+        padding-top: 70px;
+        margin-top: 30px;
+    }
+    #addnewtask{
+        margin-top: 100px !important;
+    }
+
+    
+}
+ 
+    

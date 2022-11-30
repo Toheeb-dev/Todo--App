@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="todopage3.css">
+</head>
+<body>
+  <div id="page3">
+    <input type="date" value="date" name="date" id="date" class="border border-0  m-5 bg-none" onclick="date()">
+  </div>
+  <canvas id="canvas"></canvas>
+
+
+    <!-- <!-- <div class="main " > -->
+      <form action="" id="form">
+        <input type="text" name="" id="inputtodo" placeholder="Enter your Todo" class="bg-danger border-0  text-dark text-center m-5">
+        <select name="" id="selecttodo">
+          <option value="Work Out" >Work Out</option>
+          <option value="Eat Food">Eat Food</option>
+          <option value="Art & Design">Art & Design</option>
+          <option value="Read Book">Read Book</option>
+          <option value="Traveling">Traveling</option>
+          <option value="Gaming">Gaming</option>
+          <option value="HouseChore">HouseChore</option>
+          <option value="Resting">Resting</option>
+        </select>
+      </form>
+      <textarea name="" id="" cols="30" rows="10">fhfhh</textarea> -->
+        <h1 id="result"></h1>
+        <p id="result2"></p>
+      <button class="btn btn-danger d-grid py-4 col-6 mx-auto" id="btn" onclick="addTodo()"><strong>Add Todo</strong></button>
+    </div>
+        <script>
+          let userItems = []
+          let sameTodo= []
+            function addTodo() {
+              
+            }
+
+            let allTask = []
+            allTask = JSON.parse(localStorage.getItem("allTodo"))
+            console.log(allTask)
+            
+function addTodo() {
+  sameTodo=[]
+  console.log(allTask);
+            result.innerHTML ="" 
+           
+             sameTask = allTask.find((it, index, _)=>it == selecttodo.value)
+	           if(sameTask == true){
+                var items = {
+              header: selecttodo.value,
+              footer: inputtodo.value
+            }
+            userItems.push(items) 
+            userItems.map((item, index, array)=>{
+              foundTodo = sameTodo.find((it, ind, arr)=>it == selecttodo.value)
+            if (foundTodo) {
+              result2.innerHTML = `<p class="alert alert-danger fw-bold">Task has alredy been decleared</p>`
+            }else if(!foundTodo){
+              result.innerHTML +=  `<h1>${userItems[index].header}</h1><p>${userItems[index].footer}</p>`
+              sameTodo.push(userItems[index].header)
+              console.log(sameTodo);
+              result2.innerHTML = ""
+            }
+            
+              localStorage.setItem("same", JSON.stringify(sameTodo))
+           let sameStorage = JSON.parse(localStorage.getItem("same"))
+            sameTodo.push(inputtodo.value)
+              console.log(sameStorage);
+
+            foundTodo = sameStorage.find((item, ind, array)=>item == selecttodo.value)
+              if (foundTodo) {
+               alert("oti wan be")
+              
+            }
+                console.log(foundTodo);
+
+          console.log(userItems)
+        }
+        
+
+        
+    
+        // <script>
+        //   const show = document.getElementById("date")
+        //   show.addEventListener("click" , updateName)
+        //   function updateName() {
+        //     const name = prompt("new name")
+        //     show.textContent =` hello ${name}`
+        //   }
+        //   const color = document.getElementById("canvas")
+        //   const ctx = color.getContext("2d")
+        //   ctx.fillstyle = "green"
+
+        // </script>
+
+
+
+
+        </script> 
+</body>
+</html>

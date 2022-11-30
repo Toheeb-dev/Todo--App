@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="todopage.css">
+</head>
+<body>
+    <h2 class="py-5 mx-3 text-dark" id="habit"><strong>Choose habit</strong></h2>
+    <div class="text-dark" id="choose">Choose your daily habit, and set a challenge <br> for yourself.</div>
+    <form action="hi.html" method="post">
+    
+    <div id="taskcontainer" class="text-center" >
+        <div class="todo" id="box1" value="workout" onclick="workOut()">
+            <img src="./weightlifting.png" alt="" id="img">
+            <p id="b1">Work Out</p>
+        </div>
+        <div class="todo" id="box2" value="eatfood" onclick="eatFood()">
+            <img src="./hamburger.png" alt="" id="img">
+            <p id="b2">Eat Food</p>
+        </div>
+        <div class="todo" id="box3" value="artdesign" onclick="artDesign()">
+            <img src="./palette.png" alt="" id="img">
+            <p id="b3">Art & Design</p>
+        </div>
+        <div class="todo" id="box4" value="readbook" onclick="readBook()">
+            <img src="./book.png" alt="" id="img">
+            <p id="b4">Read Book</p>
+        </div>
+        <div class="todo" id="box5" value="traveling" onclick="traveling()">
+            <img src="./suitcase.png" alt="" id="img">
+            <p id="b5">Traveling</p>
+        </div>
+        <div class="todo" id="box6" value="gaming" onclick="gaming()">
+            <img src="./gaming.png" alt="" id="img">
+            <p id="b6">Gaming</p>
+        </div>
+        <div class="todo" id="box7" value="houseChore" onclick="houseChores()">
+            <img src="./house.png" alt="" id="img">
+            <p id="b7">House Chores</p>
+        </div>
+        <div class="todo" id="box8" value="Resting" onclick="clock()">
+            <img src="./clock.png" alt="" id="img">
+            <p id="b8">Resting</p>
+        </div>
+    </div>
+</form>
+    <div class="d-grid py-5 col-6 mx-auto">
+        <button class="btn btn-danger text-dark rounded-pill" type="button" id="add" onclick="createtask()">Add TodoList</button>
+      </div>
+      
+      <script src="Todo.js"></script>
+</body>
+</html>
