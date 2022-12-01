@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+        var allStudents = JSON.parse(localStorage.getItem
+        ("localstudents")
+        )
+        var password = pass.value
+        var email = mail.value
+        var found = false 
+        for (let index = 0; index < allStudents.length; index++) {
+            if(allStudents[index].email==userEmail && allStudents[index].password ==userPassword){
+                localStorage.setItem("currentUser",index)
+                found = true
+            }
+            
+        if(found=true){
+            window.location =""
+        }
+        else{
+            alert("incorrect password")
+        }
+     }
+    </script>
+</body>
+</html>

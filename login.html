@@ -32,14 +32,30 @@
             <button class="btn btn-primary mt-0 mb-2" onclick="login()">LogIn</button>
         </div>
         </div>
+        <div class="disp"></div>
         </section>
         <script>
           
-            user = JSON.parse(localStorage.getItem("storageName"))
+            
             function login() {
-                if (user.mail==) {
-                    
-                }
+                user = JSON.parse(localStorage.getItem("storageName")) 
+        ("localstudents")
+        var email = emailInp.value
+        var pasword = password.value
+        var found = false 
+        for (let index = 0; index < allStudents.length; index++) {
+            if(allStudents[index].email==email && allStudents[index].password ==password){
+                localStorage.setItem("currentUser",index)
+                found = true
+            }
+            
+        if(found=true){
+            window.location ="index.html"
+        }
+        else{
+           disp.innerHTML =`<h5 class="bg-danger">Incorrect details</h5>` 
+        }
+     } 
             }
         </script>
 </body>

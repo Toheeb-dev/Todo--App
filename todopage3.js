@@ -56,6 +56,7 @@ let Input = []
 
         const deleteTask =(deleteIt)=>{
           Input.splice(deleteIt,1)
+          localStorage.setItem(("userInput"), JSON.stringify(Input))
           displayTask()
           
          }
